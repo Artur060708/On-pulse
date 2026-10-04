@@ -21,17 +21,77 @@
         </nav>
     </header>
 
-    <main>
+<main>
 
-        <section id="inicio">
-            <h2>Bem-vindo ao On Pulse</h2>
-            <p>
-                Organize seus treinos, exercícios, cargas e repetições
-                em um único lugar.
-            </p>
-        </section>
+    <section id="inicio">
+        <h2>Bem-vindo ao On Pulse</h2>
+        <p>
+            Organize seus treinos, exercícios, cargas e repetições
+            em um único lugar.
+        </p>
+    </section>
 
-    </main>
+    <section id="cadastro">
+        <h2>Cadastrar treino</h2>
+
+        <form>
+
+            <div>
+                <label for="nome-treino">Nome do treino:</label>
+                <input type="text" id="nome-treino" name="nome-treino"
+                    placeholder="Ex.: Treino A - Peito e Tríceps">
+            </div>
+
+            <div>
+                <label for="tipo-treino">Tipo de treino:</label>
+                <select id="tipo-treino" name="tipo-treino">
+                    <option value="">Selecione</option>
+                    <option value="musculacao">Musculação</option>
+                    <option value="corrida">Corrida</option>
+                    <option value="crossfit">Crossfit</option>
+                    <option value="funcional">Funcional</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="divisao">Divisão do treino:</label>
+                <select id="divisao" name="divisao">
+                    <option value="">Selecione</option>
+                    <option value="superior">Parte superior</option>
+                    <option value="inferior">Parte inferior</option>
+                    <option value="full-body">Full body</option>
+                    <option value="cardio">Cardio</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="exercicios">Exercícios:</label>
+                <textarea id="exercicios" name="exercicios"
+                    placeholder="Ex.: Supino reto, Tríceps pulley, Crucifixo..."></textarea>
+            </div>
+
+            <div>
+                <label for="status">Status do treino:</label>
+                <select id="status" name="status">
+                    <option value="">Selecione</option>
+                    <option value="concluido">Concluído</option>
+                    <option value="parcial">Concluído parcialmente</option>
+                    <option value="pendente">Não concluído</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="observacoes">Observações:</label>
+                <textarea id="observacoes" name="observacoes"
+                    placeholder="Observações sobre o treino..."></textarea>
+            </div>
+
+            <button type="submit">Cadastrar treino</button>
+
+        </form>
+    </section>
+
+</main>
 
     <footer>
         <p>&copy; 2026 On Pulse</p>
