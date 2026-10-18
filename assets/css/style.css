@@ -1,6 +1,6 @@
 
 /* ==================================
-   ON PULSE - IDENTIDADE VISUAL
+   1. IDENTIDADE VISUAL
 ================================== */
 
 :root {
@@ -70,23 +70,30 @@ nav a:hover {
     background-color: var(--cor-primaria);
 }
 
+/* CONTEÚDO PRINCIPAL */
 
 main {
     width: 90%;
     max-width: 1100px;
-    margin: 30px auto;
+    margin: 35px auto;
 }
 
-section,
-aside {
-    background-color: white;
-    padding: 25px;
+section {
+    background: var(--cor-branca);
+    padding: 30px;
     margin-bottom: 25px;
-    border-radius: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.06);
 }
 
+section h2 {
+    margin-top: 0;
+    color: var(--cor-escura);
+}
 
-/* FORMULÁRIO DE CADASTRO */
+/* ==================================
+   2. FORMULÁRIO DE CADASTRO
+================================== */
 
 #cadastro form {
     display: flex;
@@ -111,12 +118,13 @@ aside {
 #cadastro select,
 #cadastro textarea {
     width: 100%;
+    max-width: 100%;
     padding: 13px 15px;
     border: 1px solid var(--cor-borda);
     border-radius: 8px;
     font-family: inherit;
     font-size: 1rem;
-    background-color: white;
+    background-color: #ffffff;
     color: var(--cor-texto);
     transition: border-color 0.2s, box-shadow 0.2s;
 }
@@ -141,51 +149,14 @@ aside {
     box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
 }
 
-
-input,
-select,
-textarea {
-    padding: 10px;
-    border: 1px solid #cbd5e1;
-    border-radius: 6px;
-    font-size: 16px;
-}
-
-#treinos > h2 {
-    margin-top: 0;
-    margin-bottom: 20px;
-}
-
-#treinos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-#treinos > h2 {
-    grid-column: 1 / -1;
-}
-
-#treinos article {
-    background-color: #f8fafc;
-    padding: 20px;
-    border: 1px solid #e2e8f0;
-    border-radius: 10px;
-}
-
-#treinos article h3 {
-    margin-top: 0;
-}
-
-
-/* BOTÕES E ESTADOS VISUAIS */
+/* BOTÕES */
 
 button {
     padding: 12px 18px;
     border: none;
     border-radius: 8px;
     background-color: var(--cor-primaria);
-    color: white;
+    color: #ffffff;
     font-size: 0.95rem;
     font-weight: bold;
     cursor: pointer;
@@ -208,58 +179,26 @@ nav a:focus-visible {
 }
 
 #cadastro button {
-    width: fit-content;
+    align-self: flex-start;
     margin-top: 5px;
 }
 
-
-#cadastro h2,
-#detalhes h2 {
-    margin-top: 0;
-}
-
-#cadastro form {
-    max-width: 700px;
-}
-
-label {
-    font-weight: bold;
-}
-
-#treinos article button {
-    margin-top: 10px;
-    margin-right: 5px;
-}
-
-#detalhes table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-
-#detalhes th,
-#detalhes td {
-    padding: 12px;
-    border: 1px solid #cbd5e1;
-    text-align: left;
-}
-
-#detalhes th {
-    background-color: #e2e8f0;
-}
-
-footer {
-    text-align: center;
-    padding: 25px;
-    margin-top: 30px;
-    background-color: #0f172a;
-    color: white;
-}
-
-
 /* ==================================
-   PESQUISA, FILTROS E ORDENAÇÃO
+   3. LISTAGEM E FERRAMENTAS
 ================================== */
+
+#treinos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+#treinos > h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+}
+
+/* PESQUISA, FILTROS E ORDENAÇÃO */
 
 .barra-ferramentas {
     grid-column: 1 / -1;
@@ -291,8 +230,9 @@ footer {
     padding: 11px;
     border: 1px solid var(--cor-borda);
     border-radius: 7px;
-    background-color: white;
+    background-color: #ffffff;
     color: var(--cor-texto);
+    font: inherit;
 }
 
 .barra-ferramentas input:focus-visible,
@@ -301,17 +241,143 @@ footer {
     outline-offset: 2px;
 }
 
-/* DETALHES DO TREINO */
+/* ==================================
+   4. CARDS DE TREINO
+================================== */
 
-#detalhes {
-    margin-top: 25px;
+#treinos .card-treino {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 22px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.05);
+    transition: box-shadow 0.2s, transform 0.2s;
 }
+
+#treinos .card-treino:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+}
+
+/* CABEÇALHO DOS CARDS */
+
+.cabecalho-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.cabecalho-card h3 {
+    margin: 0;
+    color: var(--cor-primaria);
+}
+
+/* STATUS */
+
+.status {
+    display: inline-block;
+    padding: 5px 11px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.status-concluido {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.status-parcial {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.status-pendente {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+/* LISTA DE EXERCÍCIOS */
+
+.card-treino h4 {
+    margin-bottom: 8px;
+}
+
+.card-treino ul {
+    padding-left: 20px;
+    margin-top: 5px;
+    overflow-wrap: anywhere;
+}
+
+/* AÇÕES DOS CARDS */
+
+.acoes-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.acoes-card button,
+.acoes-card .botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 12px;
+    margin: 0;
+    border-radius: 7px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.acoes-card .botao-detalhes {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+.acoes-card .botao-detalhes:hover {
+    background-color: #1d4ed8;
+}
+
+.acoes-card .botao-editar {
+    background-color: #e2e8f0;
+    color: #1e293b;
+}
+
+.acoes-card .botao-editar:hover {
+    background-color: #cbd5e1;
+}
+
+.acoes-card .botao-excluir {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.acoes-card .botao-excluir:hover {
+    background-color: #fecaca;
+}
+
+.acoes-card button:focus-visible,
+.acoes-card a:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: 3px;
+}
+
+/* ==================================
+   5. DETALHES DO TREINO
+================================== */
 
 #detalhes h3 {
     color: var(--cor-primaria);
 }
-
-/* TABELA */
 
 .tabela-responsiva {
     width: 100%;
@@ -346,3 +412,15 @@ footer {
     color: #1e40af;
     font-size: 0.9rem;
 }
+
+/* RODAPÉ */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 30px;
+    background-color: var(--cor-escura);
+    color: #ffffff;
+}
+
+/* MEDIA QUERIES: SERÃO ADICIONADAS NO COMMIT 5 */
