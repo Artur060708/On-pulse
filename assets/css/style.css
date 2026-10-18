@@ -255,3 +255,94 @@ footer {
     background-color: #0f172a;
     color: white;
 }
+
+
+/* ==================================
+   PESQUISA, FILTROS E ORDENAÇÃO
+================================== */
+
+.barra-ferramentas {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+    padding: 20px;
+    background-color: #f8fafc;
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+}
+
+.barra-ferramentas > div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+}
+
+.barra-ferramentas label {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.barra-ferramentas input,
+.barra-ferramentas select {
+    width: 100%;
+    min-width: 0;
+    padding: 11px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 7px;
+    background-color: white;
+    color: var(--cor-texto);
+}
+
+.barra-ferramentas input:focus-visible,
+.barra-ferramentas select:focus-visible {
+    outline: 2px solid var(--cor-primaria);
+    outline-offset: 2px;
+}
+
+/* DETALHES DO TREINO */
+
+#detalhes {
+    margin-top: 25px;
+}
+
+#detalhes h3 {
+    color: var(--cor-primaria);
+}
+
+/* TABELA */
+
+.tabela-responsiva {
+    width: 100%;
+    overflow-x: auto;
+}
+
+#detalhes table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+#detalhes th,
+#detalhes td {
+    padding: 14px;
+    border: 1px solid var(--cor-borda);
+    text-align: left;
+}
+
+#detalhes th {
+    background-color: #e2e8f0;
+    color: var(--cor-escura);
+}
+
+/* MENSAGEM INFORMATIVA */
+
+.mensagem-sistema {
+    padding: 15px;
+    border-left: 4px solid var(--cor-primaria);
+    border-radius: 6px;
+    background-color: #eff6ff;
+    color: #1e40af;
+    font-size: 0.9rem;
+}

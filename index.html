@@ -94,6 +94,50 @@
     
     <section id="treinos">
     <h2>Meus treinos</h2>
+    
+    <!-- PESQUISA, FILTROS E ORDENAÇÃO -->
+
+    <div class="barra-ferramentas">
+
+        <div class="campo-pesquisa">
+            <label for="pesquisa">Pesquisar treino</label>
+            <input type="search" id="pesquisa"
+                placeholder="Digite o nome do treino...">
+        </div>
+
+        <div>
+            <label for="filtro-tipo">Filtrar por tipo</label>
+            <select id="filtro-tipo">
+                <option value="todos">Todos os tipos</option>
+                <option value="musculacao">Musculação</option>
+                <option value="corrida">Corrida</option>
+                <option value="crossfit">Crossfit</option>
+                <option value="funcional">Funcional</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="filtro-status">Filtrar por status</label>
+            <select id="filtro-status">
+                <option value="todos">Todos os status</option>
+                <option value="concluido">Concluído</option>
+                <option value="parcial">Parcialmente concluído</option>
+                <option value="pendente">Não concluído</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="ordenacao">Ordenar por</label>
+            <select id="ordenacao">
+                <option value="recentes">Mais recentes</option>
+                <option value="nome">Nome do treino</option>
+                <option value="tipo">Tipo de treino</option>
+            </select>
+        </div>
+
+    </div>
+
+    
 
     <article>
         <h3>Treino A - Peito e Tríceps</h3>
@@ -155,6 +199,71 @@
     </article>
 
 </section>
+
+    
+<!-- DETALHES DO TREINO -->
+
+<section id="detalhes">
+
+    <h2>Detalhes do treino</h2>
+
+    <p>
+        Consulte os exercícios, cargas, séries e repetições
+        do treino selecionado.
+    </p>
+
+    <h3>Treino A - Peito e Tríceps</h3>
+
+    <div class="tabela-responsiva">
+        <table>
+            <thead>
+                <tr>
+                    <th>Exercício</th>
+                    <th>Carga</th>
+                    <th>Séries</th>
+                    <th>Repetições</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Supino reto</td>
+                    <td>60 kg</td>
+                    <td>4</td>
+                    <td>10</td>
+                </tr>
+
+                <tr>
+                    <td>Supino inclinado</td>
+                    <td>50 kg</td>
+                    <td>3</td>
+                    <td>10</td>
+                </tr>
+
+                <tr>
+                    <td>Crucifixo</td>
+                    <td>20 kg</td>
+                    <td>3</td>
+                    <td>12</td>
+                </tr>
+
+                <tr>
+                    <td>Tríceps pulley</td>
+                    <td>30 kg</td>
+                    <td>4</td>
+                    <td>12</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p class="mensagem-sistema" role="status">
+        Visualização demonstrativa. As funcionalidades
+        interativas serão implementadas futuramente.
+    </p>
+
+</section>
+
 
 </main>
 
