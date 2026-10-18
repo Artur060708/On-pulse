@@ -85,17 +85,62 @@ aside {
     border-radius: 10px;
 }
 
-form {
+
+/* FORMULÁRIO DE CADASTRO */
+
+#cadastro form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
+    max-width: 700px;
 }
 
-form div {
+#cadastro form div {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 8px;
 }
+
+#cadastro label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--cor-escura);
+}
+
+#cadastro input,
+#cadastro select,
+#cadastro textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: white;
+    color: var(--cor-texto);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#cadastro textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+#cadastro input:hover,
+#cadastro select:hover,
+#cadastro textarea:hover {
+    border-color: var(--cor-primaria);
+}
+
+#cadastro input:focus-visible,
+#cadastro select:focus-visible,
+#cadastro textarea:focus-visible {
+    outline: 2px solid var(--cor-primaria);
+    outline-offset: 2px;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
 
 input,
 select,
@@ -132,19 +177,41 @@ textarea {
     margin-top: 0;
 }
 
+
+/* BOTÕES E ESTADOS VISUAIS */
+
 button {
-    padding: 10px 15px;
+    padding: 12px 18px;
     border: none;
-    border-radius: 6px;
-    background-color: #2563eb;
+    border-radius: 8px;
+    background-color: var(--cor-primaria);
     color: white;
+    font-size: 0.95rem;
     font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
 }
 
 button:hover {
-    background-color: #1d4ed8;
+    background-color: var(--cor-primaria-hover);
+    transform: translateY(-2px);
 }
+
+button:active {
+    transform: translateY(0);
+}
+
+button:focus-visible,
+nav a:focus-visible {
+    outline: 3px solid #22c55e;
+    outline-offset: 3px;
+}
+
+#cadastro button {
+    width: fit-content;
+    margin-top: 5px;
+}
+
 
 #cadastro h2,
 #detalhes h2 {
@@ -157,17 +224,6 @@ button:hover {
 
 label {
     font-weight: bold;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-    outline: 2px solid #2563eb;
-    border-color: #2563eb;
-}
-
-#cadastro button {
-    width: fit-content;
 }
 
 #treinos article button {
