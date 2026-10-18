@@ -423,4 +423,170 @@ footer {
     color: #ffffff;
 }
 
-/* MEDIA QUERIES: SERÃO ADICIONADAS NO COMMIT 5 */
+
+/* ==================================
+   6. RESPONSIVIDADE - TABLETS
+================================== */
+
+@media (max-width: 900px) {
+
+    /* Dois cards por linha */
+
+    #treinos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Dois filtros por linha */
+
+    .barra-ferramentas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Navegação adaptável */
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    main {
+        width: 94%;
+    }
+
+    section {
+        padding: 24px;
+    }
+}
+
+/* ==================================
+   7. RESPONSIVIDADE - CELULARES
+================================== */
+
+@media (max-width: 600px) {
+
+    /* Cabeçalho */
+
+    header {
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 1.9rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+        margin-bottom: 18px;
+    }
+
+    /* Navegação */
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    nav a {
+        display: block;
+        padding: 8px 15px;
+    }
+
+    /* Conteúdo principal */
+
+    main {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    section {
+        padding: 18px;
+        margin-bottom: 18px;
+    }
+
+    section h2 {
+        font-size: 1.4rem;
+    }
+
+    /* Formulário */
+
+    #cadastro form {
+        width: 100%;
+        gap: 15px;
+    }
+
+    #cadastro input,
+    #cadastro select,
+    #cadastro textarea {
+        min-width: 0;
+        font-size: 1rem;
+    }
+
+    #cadastro button {
+        width: 100%;
+        align-self: stretch;
+    }
+
+    /* Listagem: um card por linha */
+
+    #treinos {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 15px;
+    }
+
+    /* Pesquisa e filtros */
+
+    .barra-ferramentas {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 15px;
+        gap: 15px;
+    }
+
+    /* Cards */
+
+    #treinos .card-treino {
+        padding: 18px;
+    }
+
+    .cabecalho-card h3 {
+        font-size: 1.15rem;
+    }
+
+    /* Botões */
+
+    .acoes-card {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .acoes-card button,
+    .acoes-card .botao {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Tabela */
+
+    .tabela-responsiva {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #detalhes table {
+        min-width: 480px;
+    }
+
+    #detalhes th,
+    #detalhes td {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+
+    /* Rodapé */
+
+    footer {
+        padding: 20px 15px;
+        font-size: 0.85rem;
+    }
+}
+
